@@ -1,0 +1,110 @@
+/* Общие стили */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Сетка товаров (Page 1) */
+.products-container {
+  display: grid;
+  /* Адаптивная сетка, минимум 200px ширина карточки */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+  transition: box-shadow 0.2s;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Ограничение кол-ва строк */
+  -webkit-box-orient: vertical;
+}
+
+/* Детальная страница (Page 2) */
+.details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.details-card {
+  border: 2px solid #000;
+  padding: 30px;
+  width: 500px;
+  text-align: center;
+  background: white;
+}
+
+.image-wrapper img {
+  max-width: 150px;
+  height: auto;
+  margin: 20px 0;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.description {
+  font-size: 12px;
+  color: #555;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.back-btn {
+  background: white;
+  border: 2px solid black;
+  padding: 10px 30px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.back-btn:hover {
+  background: #f0f0f0;
+}
+.product-card {
+  /* Увеличим высоту карточки, чтобы влезла картинка */
+  height: 300px;
+}
+
+.img-wrapper {
+  height: 150px; /* Фиксированная высота для зоны картинки */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.img-wrapper img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain; /* Картинка не будет сплющиваться */
+}
